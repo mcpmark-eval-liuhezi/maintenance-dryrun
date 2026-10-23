@@ -1,0 +1,14 @@
+name: Dry Run CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo dry run
+        run: |
+          echo "dryrun pipeline executed"
+          exit 0
